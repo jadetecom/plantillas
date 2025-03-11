@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"templatemo_558_klassy_cafe",
 		"templatemo_560_astro_motion",
 		"templatemo_562_space_dynamic",
-		"templatemo_563_seo_dream",
-		"watch-v1.0.0"
+		"templatemo_563_seo_dream"
     ];
 
     const container = document.getElementById("templateList");
