@@ -12,7 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
         "Romyk-1.0.0",
         "Selecao-1.0.0",
         "solar-energy-website-template",
-        "startbootstrap-landing-page-gh-pages"
+        "startbootstrap-landing-page-gh-pages",
+		"clickr",
+		"knight",
+		"templatemo_558_klassy_cafe",
+		"templatemo_560_astro_motion",
+		"templatemo_562_space_dynamic",
+		"templatemo_563_seo_dream",
+		"watch-v1.0.0"
     ];
 
     const container = document.getElementById("templateList");
