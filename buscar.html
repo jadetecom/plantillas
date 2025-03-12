@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contacts</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="jadetecom" />
+    <meta name="keywords"
+        content="jadetecom, jade tecom, jade, tecom, c#, java, programacion, pagina web, desarrollo web, academia, cursos" />
+    <link rel="icon" href="images/icono.png">
+    <link rel="shortcut icon" href="images/icono.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <style>
+        .sf-menu li a {
+            color: white;
+        }
+
+        #marcador {
+            border-bottom: 4px aliceblue solid;
+        }
+    </style>
+</head>
+
+<body class="" id="top">
+    <header>
+        <!--==============================header=================================-->
+        <div class="container_12">
+            <div class="grid_12">
+                <h1>
+                    <img src="images/LogoJade2.png" width="200" height="65">
+                </h1>
+                <div class="menu_block">
+                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                        <ul class="sf-menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="about.html">Quienes Somos</a></li>
+                            <li><a href="services.html"> Servicios</a></li>
+                            <li><a href="contact.html">Contacto</a></li>
+                            <li><a href="buscar.html" id="marcador">Certificado</a></li>
+                            <li><a href="index2.html">Plantillas</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!--==============================Content=================================-->
+    <div class="content">
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="clear"></div>
+                <h3 class="head1">Ingresa Codigo</h3>
+                <form id="form" method="get" action="certificado.html">
+                    <fieldset>
+                        <label class="name">
+                            <input type="text" placeholder="Ingresar Codigo:" id="codigo" name="codigo">
+                            <br class="clear">
+                            <div class="btns"><a data-type="submit" class="btn" id="btnMostrar">Buscar Certificado</a>
+                                <div class="clear"></div>
+                            </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="grid_12">
+                <div class="clear"></div>
+                <h3 class="head1">Certificado</h3>
+                <div id="mostrarCertificado">
+                    <img src="images/pensando.jpg" id="imgCertificado" width="100%" height="700px">
+                    <br class="clear">
+                    <div class="grid_12">
+                        <div class="grid_4">
+                            <div class="btns"><a class="btn" id="btnDescargar" href="#" target="_blank">Descargar</a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="grid_4">
+                            <div class="btns"><a data-type="submit" class="btn" id="btnVerCertificado" href="#" target="_blank">Ver Certificado</a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================footer=================================-->
+    <footer>
+        <div class="container_12">
+            <div class="grid_3 fright">
+                <h4>Registro</h4>
+                <form id="newsletter">
+
+                    <div class="rel">
+                        <div class="success">¡Tu solicitud de suscripción ha sido enviada!</div>
+                        <label class="email">
+                            <input type="email" value="Enter your email...">
+                            <a href="#" class="" data-type="submit">Enviar</a>
+                            <span class="error">*Esta no es una dirección de correo electrónico válida.</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="grid_2 fright">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Celular: <br> +51 974 435 019</li>
+                    <li>Correo: informes@jadetecom.com</li>
+                </ul>
+            </div>
+            <div class="grid_2 fright">
+                <h4>Redes</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/jadetecom">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/jadetecom/">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/jadetecom/">Linkedin</a></li>
+                    <li><a href="https://www.tiktok.com/@jadetecom">Tiktok</a></li>
+                </ul>
+            </div>
+            <div class="grid_3 cop">
+
+                <div class="copy">
+                    <a href="index.html"><img src="images/LogoJade.png" alt=""></a><br>
+                    &copy; 2023 <a href="index.html">JADE TECOM</a> <!--{%FOOTER_LINK} -->
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("load", cargarEventos, false);
+        function cargarEventos() {
+            document.getElementById("btnMostrar").addEventListener("click", mostrarCertificado, false);
+        }
+        function mostrarCertificado() {
+            let codigo = document.getElementById("codigo").value;
+            if (codigo != "") {
+                let etiquetaImg = document.getElementById("imgCertificado");
+                let verCertificado = document.getElementById("btnVerCertificado");
+                let descargar = document.getElementById("btnDescargar");
+                etiquetaImg.src = "certificado/" + codigo + ".jpg";
+                verCertificado.href = "certificado/" + codigo + ".jpg";
+                descargar.href = "certificado/" + codigo + ".pdf";
+                document.getElementById("codigo").value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
